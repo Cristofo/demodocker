@@ -21,8 +21,8 @@ public class ClienteController {
 
 
     @GetMapping(value = "/get-all")
-    public List<Client> getClientes(){
-        return clientService.getClients();
+    public ResponseEntity<List<Client>> getClientes(){
+        return ResponseEntity.ok(clientService.getClients());
     }
 
 }
